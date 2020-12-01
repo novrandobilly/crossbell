@@ -41,8 +41,6 @@ const CompaniesListAO = (props) => {
     setfilter("Premium");
   };
 
-  console.log(data);
-
   let content = (
     <div className={classes.FlexContainer}>
       <div className={classes.Container}>

@@ -45,6 +45,13 @@
   outline: none;
 }
 
+.SearchButton {
+  background-color: rgba(58, 81, 153, 1);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
 .EditAdmin {
   background-color: rgba(58, 81, 153, 1);
   font-size: 1rem;

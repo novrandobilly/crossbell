@@ -30,7 +30,10 @@ const NavigationLinks = (props) => {
         </li>
         {props.auth.isLoggedIn && !props.auth.isCompany && (
           <li>
-            <NavLink to="/ap/:applicantid" activeClassName={classes.active}>
+            <NavLink
+              to={`/ap/${props.auth.userId}`}
+              activeClassName={classes.active}
+            >
               My Profile
             </NavLink>
           </li>
