@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionTypes from "../../store/actions/actions";
@@ -8,13 +8,23 @@ import SideBar from "./SideBar";
 import classes from "./NavigationLinks.module.css";
 
 const NavigationLinks = (props) => {
-  const [admin, setAdmin] = useState(true);
-
   const logoutHandler = () => {
-    props.logout();
+    if (props.admin.isLoggedIn) {
+      props.admLogout();
+    } else {
+      props.logout();
+    }
     props.history.push("/jobs-dashboard");
   };
 
+  let logout = null;
+  if (props.auth.isLoggedIn || props.admin.isLoggedIn) {
+    logout = (
+      <li onClick={logoutHandler}>
+        <NavLink to="#">Logout</NavLink>
+      </li>
+    );
+  }
   return (
     <div className={classes.NavContainer}>
       <ul className={classes.NavLinks}>
@@ -26,6 +36,11 @@ const NavigationLinks = (props) => {
         <li>
           <NavLink to="/jobs-dashboard" activeClassName={classes.active}>
             Explore Jobs
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="#" activeClassName={classes.active}>
+            Development Pages
           </NavLink>
         </li>
         {props.auth.isLoggedIn && !props.auth.isCompany && (
@@ -48,14 +63,11 @@ const NavigationLinks = (props) => {
             </NavLink>
           </li>
         )}
-
-        {props.auth.isLoggedIn && (
-          <li onClick={logoutHandler}>
-            <NavLink to="#">Logout</NavLink>
-          </li>
-        )}
+        {logout}
       </ul>
-      <div>{admin && props.auth.isLoggedIn ? <SideBar /> : <div />}</div>
+      <div className={classes.active}>
+        <SideBar />
+      </div>
     </div>
   );
 };
@@ -63,12 +75,14 @@ const NavigationLinks = (props) => {
 const mapStateToProps = (state) => {
   return {
     auth: state.auth,
+    admin: state.admin,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     logout: () => dispatch({ type: actionTypes.AUTHLOGOUT }),
+    admLogout: () => dispatch({ type: actionTypes.ADMINLOGOUT }),
   };
 };
 

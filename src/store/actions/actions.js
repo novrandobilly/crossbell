@@ -1,4 +1,3 @@
-
 export const CREATEJOB = "CREATE_JOB";
 export const CREATEJOBSTART = "CREATE_JOB_START";
 export const CREATEJOBSUCCESS = "CREATE_JOB_SUCCESS";
@@ -55,6 +54,7 @@ export const GETALLJOB = "GET_ALL_JOB";
 export const GETALLJOBFAIL = "GET_ALL_JOB_FAIL";
 export const GETALLJOBSTART = "GET_ALL_JOB_START";
 
+export const ADMINLOGOUT = "ADMIN_LOGOUT";
 //============================= FeedBack ==============================
 export const CREATEFEEDBACKSUCCESS = "CREATE_FEEDBACK_SUCCESS";
 export const CREATEFEEDBACKFAIL = "CREATE_FEEDBACK_FAIL";
@@ -70,13 +70,15 @@ export const DELETEFEEDBACKSTART = "DELETE_FEEDBACKS_TART";
 
 //============================= Auth ==============================
 export const AUTHADMIN = "AUTH_ADMIN";
+export const AUTHADMINSTART = "AUTH_ADMIN_START";
+export const AUTHADMINFAIL = "AUTH_ADMIN_FAIL";
+export const AUTHADMINFINISH = "AUTH_ADMIN_FINISH";
 export const AUTHCOMPANY = "AUTH_COMPANY";
 export const AUTHLOGIN = "AUTH_LOGIN";
 export const AUTHLOGINSTART = "AUTH_LOGIN_START";
 export const AUTHLOGINFAIL = "AUTH_LOGIN_FAIL";
 export const AUTHLOGOUT = "AUTH_LOGOUT";
 
-export const FETCHINGSTART = 'FETCHING_START';
-export const FETCHINGFAIL = 'FETCHING_FAIL';
-export const FETCHINGFINISH = 'FETCHING_FINISH';
-
+export const FETCHINGSTART = "FETCHING_START";
+export const FETCHINGFAIL = "FETCHING_FAIL";
+export const FETCHINGFINISH = "FETCHING_FINISH";

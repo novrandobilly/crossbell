@@ -13,11 +13,13 @@ import applicantReducers from "./store/reducers/applicant-reducers";
 import authhReducers from "./store/reducers/auth-reducers";
 import feedbackReducers from "./store/reducers/feedback-reducers";
 import financeReducers from "./store/reducers/finance-reducer";
+import adminReducers from "./store/reducers/admin-reducers";
 
 const rootReducers = combineReducers({
   job: jobReducers,
   company: companyReducers,
   applicant: applicantReducers,
+  admin: adminReducers,
   auth: authhReducers,
   feed: feedbackReducers,
   finance: financeReducers,
