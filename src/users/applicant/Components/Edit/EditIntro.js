@@ -2,11 +2,11 @@ import React, { useEffect, useState, useReducer } from 'react';
 import moment from 'moment';
 import { connect } from 'react-redux';
 import { useParams, withRouter, Link } from 'react-router-dom';
-import { useForm } from '../../../../../shared/utils/useForm';
+import { useForm } from '../../../../shared/utils/useForm';
 
-import * as actionTypes from '../../../../../store/actions/actions';
-import * as actionCreators from '../../../../../store/actions/index';
-import { VALIDATOR_REQUIRE, VALIDATOR_EMAIL, VALIDATOR_ALWAYSTRUE } from '../../../../../shared/utils/validator';
+import * as actionTypes from '../../../../store/actions/actions';
+import * as actionCreators from '../../../../store/actions/index';
+import { VALIDATOR_REQUIRE, VALIDATOR_EMAIL, VALIDATOR_ALWAYSTRUE } from '../../../../shared/utils/validator';
 
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
@@ -16,12 +16,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import Modal from '../../../../../shared/UI_Element/Modal';
-import SpinnerCircle from '../../../../../shared/UI_Element/Spinner/SpinnerCircle';
-import Cities from '../../../../../shared/UI_Element/CitiesData';
-import Input from '../../../../../shared/UI_Element/Input';
-import WorkFieldData from '../../../../../shared/UI_Element/WorkFieldData';
-import LocationData from '../../../../../shared/UI_Element/LocationData';
+import Modal from '../../../../shared/UI_Element/Modal';
+import SpinnerCircle from '../../../../shared/UI_Element/Spinner/SpinnerCircle';
+import Cities from '../../../../shared/UI_Element/CitiesData';
+import Input from '../../../../shared/UI_Element/Input';
+import WorkFieldData from '../../../../shared/UI_Element/WorkFieldData';
+import LocationData from '../../../../shared/UI_Element/LocationData';
 
 import classes from './EditIntro.module.css';
 

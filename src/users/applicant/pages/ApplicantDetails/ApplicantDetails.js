@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import * as actionCreators from '../../../../store/actions/index';
 import SpinnerCircle from '../../../../shared/UI_Element/Spinner/SpinnerCircle';
-import Container from '../Components/ApplicantMap';
+import ApplicantMap from '../../Components/ApplicantMap';
 
 const ApplicantDetails = props => {
 	const { applicantid } = useParams();
@@ -31,7 +31,7 @@ const ApplicantDetails = props => {
 		[ getOneApplicant, setIsLoading, applicantid, props.auth ]
 	);
 
-	return <React.Fragment>{isLoading ? <SpinnerCircle /> : <Container items={data} id={applicantid} />}</React.Fragment>;
+	return <React.Fragment>{isLoading ? <SpinnerCircle /> : <ApplicantMap items={data} id={applicantid} />}</React.Fragment>;
 };
 
 const mapDispatchToProps = dispatch => {

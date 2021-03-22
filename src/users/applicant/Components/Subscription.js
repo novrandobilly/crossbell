@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useParams, withRouter } from 'react-router-dom';
-import { useForm } from '../../../../shared/utils/useForm';
+import { useForm } from '../../../shared/utils/useForm';
 
-import * as actionTypes from '../../../../store/actions/actions';
-import * as actionCreators from '../../../../store/actions/index';
-import Modal from '../../../../shared/UI_Element/Modal';
-import OrderModal from '../../../../shared/UI_Element/OrderModal';
+import * as actionTypes from '../../../store/actions/actions';
+import * as actionCreators from '../../../store/actions/index';
+import Modal from '../../../shared/UI_Element/Modal';
+import OrderModal from '../../../shared/UI_Element/OrderModal';
 import Button from '@material-ui/core/Button';
-import SpinnerCircle from '../../../../shared/UI_Element/Spinner/SpinnerCircle';
+import SpinnerCircle from '../../../shared/UI_Element/Spinner/SpinnerCircle';
 
 import classes from './Subscription.module.css';
 

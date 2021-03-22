@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { useForm } from '../../../../shared/utils/useForm';
+import { useForm } from '../../../shared/utils/useForm';
 
 import Button from '@material-ui/core/Button';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import * as actionTypes from '../../../../store/actions/actions';
-import * as actionCreators from '../../../../store/actions/index';
-import { VALIDATOR_REQUIRE, VALIDATOR_EMAIL, VALIDATOR_ALWAYSTRUE } from '../../../../shared/utils/validator';
+import * as actionTypes from '../../../store/actions/actions';
+import * as actionCreators from '../../../store/actions/index';
+import { VALIDATOR_REQUIRE, VALIDATOR_EMAIL, VALIDATOR_ALWAYSTRUE } from '../../../shared/utils/validator';
 
-import Modal from '../../../../shared/UI_Element/Modal';
+import Modal from '../../../shared/UI_Element/Modal';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import Input from '../../../../shared/UI_Element/Input';
-import SpinnerCircle from '../../../../shared/UI_Element/Spinner/SpinnerCircle';
+import Input from '../../../shared/UI_Element/Input';
+import SpinnerCircle from '../../../shared/UI_Element/Spinner/SpinnerCircle';
 import classes from './EditIntro.module.css';
 
 const EditIntro = props => {

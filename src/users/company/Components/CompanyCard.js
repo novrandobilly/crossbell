@@ -3,15 +3,15 @@ import { Link, useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import moment from 'moment';
 
-import * as actionTypes from '../../../../store/actions/actions';
-import * as actionCreators from '../../../../store/actions';
-import OutsideClick from '../../../../shared/utils/outsideClick';
+import * as actionTypes from '../../../store/actions/actions';
+import * as actionCreators from '../../../store/actions';
+import OutsideClick from '../../../shared/utils/outsideClick';
 
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Button from '@material-ui/core/Button';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import IconButton from '../../../../shared/UI_Element/IconButton';
-import TextOnly from '../../../../shared/UI_Element/TextOnly';
+import IconButton from '../../../shared/UI_Element/IconButton';
+import TextOnly from '../../../shared/UI_Element/TextOnly';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
 import Tabs from './Tabs';
